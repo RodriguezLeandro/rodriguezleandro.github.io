@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Generated Landing Page Intro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #5B4FDD; /* A vibrant purple */
+            --secondary-color: #38B2AC; /* Teal */
+            --dark-bg: #1A202C; /* Dark background */
+            --light-text: #F7FAFC; /* Light text */
+            --medium-gray: #A0AEC0; /* Medium gray for secondary text */
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--light-text);
+            background-color: var(--dark-bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(var(--spacing-unit) * 2);
+        }
+
+        header {
+            background-color: #2D3748;
+            padding: var(--spacing-unit) 0;
+            border-bottom: 1px solid #4A5568;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: calc(var(--spacing-unit) * 2);
+        }
+
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            flex-grow: 1; /* Allows hero section to take up available space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--spacing-unit) * 4) 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-unit);
+            line-height: 1.1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero #introduction-text {
+            font-size: 1.4rem;
+            color: var(--medium-gray);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            min-height: 100px; /* Prevent layout shift */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 0.8s ease-out; /* Removed to allow typing effect to control animation */
+        }
+
+        .hero button, .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 0.8rem 1.8rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: var(--spacing-unit) 0.5rem;
+        }
+
+        .hero button:hover, .btn:hover {
+            background-color: #2C7A7B; /* Darker teal */
+            transform: translateY(-2px);
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 2rem;
+        }
+
+        .loading-dots span {
+            animation: bounce 1.4s infinite ease-in-out both;
+            margin: 0 0.2rem;
+            color: var(--primary-color);
+        }
+
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Removed slideIn for introduction-text to allow typing effect */
+
+        footer {
+            background-color: #2D3748;
+            color: var(--medium-gray);
+            text-align: center;
+            padding: var(--spacing-unit);
+            font-size: 0.9rem;
+            border-top: 1px solid #4A5568;
+            margin-top: calc(var(--spacing-unit) * 2);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero #introduction-text {
+                font-size: 1.1rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: var(--spacing-unit);
+            }
+            nav ul li {
+                margin: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MyBrand.AI</a>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container hero-content">
+            <h1>Unlock Your Potential with Our Innovative Solutions</h1>
+            <p id="introduction-text">
+                <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+            </p>
+            <button id="regenerateBtn">Regenerate Intro</button>
+            <a href="#" class="btn">Get Started Now</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MyBrand.AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const introductionTextElement = document.getElementById('introduction-text');
+        const regenerateButton = document.getElementById('regenerateBtn');
+
+        // --- Simulated AI Generation Data ---
+        // These arrays will be used to randomly assemble an introduction
+        const openingPhrases = [
+            "Your journey to success begins here.",
+            "Discover the power of innovation.",
+            "Transform your workflow with cutting-edge tools.",
+            "Experience unparalleled efficiency and growth.",
+            "Unlock new possibilities with our advanced solutions.",
+            "The future of your business starts with us."
+        ];
+
+        const corePropositions = [
+            "Our cutting-edge platform is designed to streamline your operations.",
+            "We provide intelligent tools to enhance your productivity.",
+            "Leverage our advanced technology to achieve your goals faster.",
+            "Our solutions adapt to your unique needs, ensuring optimal performance.",
+            "Join a community embracing the next generation of digital excellence."
+        ];
+
+        const keyBenefits = [
+            "Enjoy seamless integration and intuitive user interfaces.",
+            "Boost your output while reducing complexity and costs.",
+            "Gain valuable insights with our robust analytics and reporting.",
+            "Save time and resources with our automated processes and smart features.",
+            "Focus on what truly matters, leaving the heavy lifting to us."
+        ];
+
+        const callToActions = [
+            "Start your free trial today and see the difference.",
+            "Explore our features and find the perfect plan for you.",
+            "Join thousands of satisfied customers elevating their work.",
+            "Don't wait, revolutionize your approach now.",
+            "Ready to elevate? Connect with our experts today."
+        ];
+
+        // --- Specific text for your request ---
+        const specificIntroText = "Your journey to success begins here. Our solutions adapt to your unique needs, ensuring optimal performance. Enjoy seamless integration and intuitive user interfaces. Explore our features and find the perfect plan for you.";
+
+        // --- Function to Simulate AI Generation (now using your specific text) ---
+        function generateSimulatedIntroduction() {
+            // Uncomment the lines below and comment out the 'return specificIntroText'
+            // if you want to use the random generation instead of the fixed text.
+
+            // const opening = openingPhrases[Math.floor(Math.random() * openingPhrases.length)];
+            // const core = corePropositions[Math.floor(Math.random() * corePropositions.length)];
+            // const benefit = keyBenefits[Math.floor(Math.random() * keyBenefits.length)];
+            // const cta = callToActions[Math.floor(Math.random() * callToActions.length)];
+            // return `${opening} ${core} ${benefit} ${cta}`;
+
+            return specificIntroText; // This is the text you requested
+        }
+
+        // --- Function to Type Text Letter by Letter (Typewriter Effect) ---
+        function typeWriterEffect(element, text, delay = 50) {
+            let i = 0;
+            element.textContent = ''; // Clear existing content
+            return new Promise(resolve => {
+                function type() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, delay);
+                    } else {
+                        resolve(); // Resolve the promise when typing is complete
+                    }
+                }
+                type();
+            });
+        }
+
+        // --- Function to Display Introduction ---
+        async function displayIntroduction() {
+            introductionTextElement.innerHTML = '<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>'; // Show loading dots
+            regenerateButton.disabled = true; // Disable button during generation
+
+            // Simulate network delay for a more realistic AI feel
+            await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 500)); // 1-1.5 second delay
+
+            const generatedText = generateSimulatedIntroduction(); // Get the (simulated) AI text
+
+            introductionTextElement.innerHTML = ''; // Clear loading dots before typing
+            await typeWriterEffect(introductionTextElement, generatedText); // Type the text letter by letter
+
+            regenerateButton.disabled = false; // Re-enable button
+        }
+
+        // --- Event Listeners ---
+        regenerateButton.addEventListener('click', displayIntroduction);
+
+        // Generate an introduction when the page loads
+        document.addEventListener('DOMContentLoaded', displayIntroduction);
+
+
+        /*
+        // --- How to integrate with a REAL AI API (e.g., Google Generative AI / OpenAI) ---
+        // This part would typically require a backend server to proxy the request
+        // and safely use your API key.
+
+        async function fetchRealAIIntroduction() {
+            // Placeholder URL for your backend endpoint
+            const backendApiUrl = '/api/generate-intro'; // Example: yourNodeServer.com/api/generate-intro
+
+            try {
+                const response = await fetch(backendApiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: "Generate a compelling and concise landing page introduction for a tech company, focusing on innovation, efficiency, and user benefits. Keep it under 100 words."
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.introduction; // Assuming your backend returns { introduction: "..." }
+
+            } catch (error) {
+                console.error("Error fetching AI introduction:", error);
+                return "Failed to generate introduction. Please try again later.";
+            }
+        }
+        */
+    </script>
+</body>
+</html>
