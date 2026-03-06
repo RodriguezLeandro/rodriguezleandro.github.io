@@ -1,0 +1,59 @@
+/* src/components/Navbar.css */
+.navbar {
+  background-color: #2d3748;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Sticky navbar */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: #f7fafc;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #38b2ac;
+}
+
+/* Responsive Navbar (simple) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-item {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+  }
+}
