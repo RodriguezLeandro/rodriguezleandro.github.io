@@ -1,0 +1,60 @@
+/* src/components/TypewriterSection.css */
+.typewriter-section {
+  background-color: #1a202c; /* Puedes usar un color de fondo diferente */
+  color: #f7fafc;
+  padding: 6rem 2rem; /* Más padding para que destaque */
+  min-height: 250px; /* Asegura espacio si el texto es corto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); /* Sutil sombra interna */
+}
+
+.typewriter-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.typed-text {
+  font-size: 2.2rem; /* Tamaño de fuente más grande */
+  line-height: 1.5;
+  color: #a0aec0; /* Color de texto más suave */
+  font-family: 'Courier New', monospace; /* Estilo de máquina de escribir */
+  min-height: 90px; /* Para evitar saltos de layout mientras se escribe */
+  display: inline-block; /* Para que el cursor se mantenga al final */
+  text-align: left; /* Mejor para bloques de texto */
+}
+
+.typewriter-cursor {
+  display: inline-block; /* Para que margin-left funcione */
+  font-size: 2.2rem; /* Mismo tamaño que el texto */
+  color: #667eea; /* Color de acento para el cursor */
+  margin-left: 5px;
+  animation: blink-cursor 0.8s infinite step-end; /* Animación de parpadeo */
+}
+
+.typewriter-cursor.blink-off {
+  animation: none; /* Detiene el parpadeo */
+  opacity: 0; /* Hace que el cursor desaparezca al terminar */
+}
+
+@keyframes blink-cursor {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .typewriter-section {
+    padding: 4rem 1rem;
+    min-height: 200px;
+  }
+  .typed-text {
+    font-size: 1.5rem;
+    min-height: 70px;
+  }
+  .typewriter-cursor {
+    font-size: 1.5rem;
+  }
+}
